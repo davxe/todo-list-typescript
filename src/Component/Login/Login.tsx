@@ -23,7 +23,7 @@ export const Login:React.FC<IProps>=(props:IProps)=>{
         }
         console.log('form data',formData)
         console.log('props data',props.history.push)
-        props.history.push(`/todo`)
+        props.history.push(`/todo/${userName}`)
     }
     return(
         <div>

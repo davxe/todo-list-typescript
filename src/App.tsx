@@ -8,7 +8,7 @@ const App:React.FC=()=> {
       <h1>Welcome To ToDo App</h1>
       <BrowserRouter>
         <Route path='/' exact={true} component={Login}/>
-        <Route path='/todo' exact={true} component={Todo}/>
+        <Route path='/todo/:name' exact={true} component={Todo}/>
       </BrowserRouter>
     </div>
   );
