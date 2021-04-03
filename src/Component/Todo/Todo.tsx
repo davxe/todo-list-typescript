@@ -66,7 +66,7 @@ const FormButton=styled.button`
     font-size:18px;
     background-color:cornflowerblue;
 `;
-const ErrorDetail=styled.div`
+export const ErrorDetail=styled.div`
     color:red;
     font-size:20px;
 `;
@@ -146,7 +146,7 @@ export const Todo:React.FC<IProps>=(props:IProps)=>{
                 {
                     todoArray.map((ele:string,i:number)=>(
                     <TodoList key={i} onDoubleClick={()=>deleteTodo(i)}>
-                        <Paragraph>{i+1} {ele}</Paragraph>
+                        <Paragraph>{i+1}. {ele}</Paragraph>
                         <p className='date'>{month}</p>
                     </TodoList>))
                 }
