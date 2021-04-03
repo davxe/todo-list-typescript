@@ -47,19 +47,21 @@ const InputButton=styled.button`
     font-size:22px;
 `;
 export const Login:React.FC<IProps>=(props:IProps)=>{
-    const [userName,setUserName]=useState<string>('')
-    const [password,setPassword]=useState<string>('')
+    const [userName,setUserName]=useState<string|any>(localStorage.getItem("username") ? localStorage.getItem("username") : "")
+    const [password,setPassword]=useState<string|any>(localStorage.getItem("password") ? localStorage.getItem("password") : "")
     const [userNameError,setUserNameError]=useState<string>('')
     const [passwordError,setPasswordError]=useState<string>('')
     //on Change od user name 
     const handleChangeUsername=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setUserName(e.target.value)
         setUserNameError('')
+        localStorage.setItem('username',e.target.value)
     }
     //on change of password
     const handleChangePassword=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setPassword(e.target.value)
         setPasswordError('')
+        localStorage.setItem('password',e.target.value)
     }
     // validation for username and password
     const validation=()=>{

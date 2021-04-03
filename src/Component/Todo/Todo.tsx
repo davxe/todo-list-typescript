@@ -130,7 +130,7 @@ export const Todo:React.FC<IProps>=(props:IProps)=>{
                     <HeaderRule/>
                 </HeaderChild>
                 <HeaderChild1>
-                    <Link to='/' onClick={()=>{console.log('hiiiii')}}>Logout</Link>
+                    <Link to='/' onClick={()=>localStorage.clear()}>Logout</Link>
                 </HeaderChild1>
             </HeaderContainer>
             <FormContainer>
