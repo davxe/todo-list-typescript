@@ -32,7 +32,7 @@ const HeaderChild1=styled(HeaderChild)`
     padding-top:20px;
     padding-right:10px;
 `;
-const Header=styled.h2`
+export const Header=styled.h2`
     padding:5px;
     margin-bottom:5px;
 `;
